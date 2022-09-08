@@ -1,0 +1,32 @@
+.main-nav {
+	background-color: $blue500;
+
+	&__list {
+		@extend %disable-list;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__link {
+		@extend %disable-link;
+		color: $white;
+		font-weight: 500;
+		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		min-height: 64px;
+
+		&:hover {
+			background: darken($blue500, 3%);
+		}
+
+		&:active {
+			background: darken($blue500, 5%);
+		}
+	}
+
+	&__icon {
+		vertical-align: top;
+		margin-right: 0.98rem;
+	}
+}

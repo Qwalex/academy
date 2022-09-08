@@ -1,0 +1,40 @@
+mixin header(data = {}) 
+	.main-header
+		.main-header__contacts
+			.container: .row
+				.col.main-header__address: .address
+					span.address__ico: span.icm.icm-mark
+					span.address__text Адрес и график работы
+				.col-auto.main-header__phones: ul.phone-list
+					li.phone-list__item: a(href="#").phone-list__link +7 (4832) 42-03-03
+					li.phone-list__item: a(href="#").phone-list__link +7 (4832) 42-52-52
+		.main-header__body
+			.container 
+				.row.main-header__body-row
+					.col
+						a(href="/").logo
+							img(src="img/logo.png", alt="Академия здоровья").logo__image
+							span.logo__text Медицинский центр в Брянске
+					.col-auto
+						.row: .col-12.main-header__buttons
+							.main-header__buttons-column: button(type="button").btn.btn--bordered-red Вызов медсестры
+							.main-header__buttons-column: button(type="button").btn.btn--fill-red Записаться на прием
+							.main-header__buttons-column
+								ul.social
+									li.social__item: a(href="#").social__link: i.icm.icm-ok
+									li.social__item: a(href="#").social__link: i.icm.icm-vk
+						.row: .col-12.main-header__callback
+							button(type="button").btn.btn--link.btn--no-pad Обратный звонок
+		nav.main-nav
+			.container 
+				ul.main-nav__list
+					li.main-nav__item: a(href="#").main-nav__link
+						img(src="img/cov.svg", alt="COVID тест").main-nav__icon
+						span COVID Тест
+					li.main-nav__item: a(href="#").main-nav__link О центре
+					li.main-nav__item: a(href="#").main-nav__link Услуги клиники
+					li.main-nav__item: a(href="#").main-nav__link Компьютерная томография
+					li.main-nav__item: a(href="#").main-nav__link Специалисты
+					li.main-nav__item: a(href="#").main-nav__link Цены
+					li.main-nav__item: a(href="#").main-nav__link Отзывы
+					li.main-nav__item: a(href="#").main-nav__link Контакты

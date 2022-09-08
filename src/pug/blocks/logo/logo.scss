@@ -1,0 +1,19 @@
+.logo {
+	position: relative;
+	display: block;
+	display: inline-block;
+
+	&__image {
+		vertical-align: top;
+	}
+
+	&__text {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-transform: uppercase;
+		color: #525970;
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+}

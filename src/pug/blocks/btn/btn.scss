@@ -1,0 +1,50 @@
+.btn {
+	@extend %disable-btn;
+	font-size: 1.5rem;
+	border-radius: 8px;
+	padding: 2px 24px 3px;
+	min-height: 36px;
+
+	&--bordered-red {
+		background-color: $white;
+		border: 1px solid $red;
+		color: $red;
+		font-weight: 500;
+
+		&:hover {
+			background-color: mix($white, rgba($red, 0.1));
+		}
+
+		&:active {
+			background-color: mix($white, rgba($red, 0.2));
+		}
+	}
+
+	&--fill-red {
+		background-color: $red;
+		color: $white;
+
+		&:hover {
+			background-color: darken($red, 2%);
+		}
+
+		&:active {
+			background-color: darken($red, 4%);
+		}
+	}
+
+	&--link {
+		font-weight: 500;
+		color: #525970;
+		text-decoration: underline;
+		font-size: 1.6rem;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&--no-pad {
+		padding: 0;
+	}
+}

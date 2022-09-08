@@ -1,0 +1,63 @@
+.main-header {
+	&__contacts {
+		padding: 16px 0;
+		background-color: $blue100;
+	}
+
+	&__body {
+		padding: 25px 0;
+		background-color: $blue300;
+	}
+
+	&__body-row {
+		align-items: center;
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
+	&__buttons-column {
+		margin-right: 1.4rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__callback {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.address {
+	display: flex;
+	align-items: center;
+
+	&__ico {
+		line-height: 1;
+		margin-right: 18px;
+		color: $red;
+	}
+
+	&__text {
+		font-weight: 500;
+	}
+}
+
+.phone-list {
+	@extend %disable-list;
+	display: flex;
+	font-weight: 700;
+
+	&__item {
+		&:last-child {
+			margin-left: 42px;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+	}
+}

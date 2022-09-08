@@ -1,0 +1,33 @@
+.social {
+	@extend %disable-list;
+	display: flex;
+
+	&__item {
+		margin-right: 0.8rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $blue400;
+		color: $white;
+		width: 3.6rem;
+		height: 3.6rem;
+		border-radius: 4px;
+		transition: background 0.25s;
+
+		&:hover {
+			background-color: lighten($blue400, 2%);
+		}
+
+		&:active {
+			background-color: lighten($blue400, 1%);
+		}
+	}
+}
