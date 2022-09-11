@@ -2,6 +2,10 @@
 	&__contacts {
 		padding: 16px 0;
 		background-color: $blue100;
+
+		@include media(xl) {
+			font-size: 1.5rem;
+		}
 	}
 
 	&__body {
@@ -15,13 +19,18 @@
 
 	&__buttons {
 		display: flex;
+		margin-bottom: 7px;
 	}
 
 	&__buttons-column {
-		margin-right: 1.4rem;
+		margin-left: 1.4rem;
 
-		&:last-child {
-			margin-right: 0;
+		&:first-child {
+			margin-left: 0;
+		}
+
+		@include media(lg) {
+			margin-left: 1rem;
 		}
 	}
 

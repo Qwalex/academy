@@ -22,6 +22,12 @@
 		border-radius: 4px;
 		transition: background 0.25s;
 
+		@include media(xl) {
+			height: 3.2rem;
+			width: 3.2rem;
+			font-size: 1.3rem;
+		}
+
 		&:hover {
 			background-color: lighten($blue400, 2%);
 		}

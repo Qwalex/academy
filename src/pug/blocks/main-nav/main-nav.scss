@@ -15,6 +15,12 @@
 		display: flex;
 		align-items: center;
 		min-height: 64px;
+		white-space: nowrap;
+
+		@include media(xl) {
+			padding: 1rem 1rem;
+			min-height: 58px;
+		}
 
 		&:hover {
 			background: darken($blue500, 3%);
@@ -23,10 +29,18 @@
 		&:active {
 			background: darken($blue500, 5%);
 		}
+
+		@include media(xl) {
+			font-size: 1.5rem;
+		}
 	}
 
 	&__icon {
 		vertical-align: top;
 		margin-right: 0.98rem;
+
+		@include media(lg) {
+			display: none;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 export default class Footer {
+	test: string;
+
 	constructor() {
-		this.test = 123;
-		console.log(this.test);
+		this.test = "footer";
 	}
 }
