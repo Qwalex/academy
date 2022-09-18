@@ -55,7 +55,7 @@ var path = {
     src: {
         pug: srcPath+'/pug/!(_)*.pug',
         js: {
-            webpack: [srcPath+'/js/**/*.js', srcPath+'/js/**/*.ts', srcPath+'/pug/blocks/**/*.ts'],
+            webpack: [srcPath+'/js/**/*.js', srcPath+'/pug/blocks/**/*.js'],
         },
         css: srcPath+'/scss/**/*.scss',
         fonts: srcPath+'/fonts/**/*',
@@ -69,7 +69,7 @@ var path = {
         pug: srcPath+'/pug/*.pug',
         blocks: srcPath+'/pug/blocks/**/*.pug',
         js: {
-            webpack: [srcPath+'/js/**/*.js', srcPath+'/js/**/*.ts', srcPath+'/pug/blocks/**/*.ts'],
+            webpack: [srcPath+'/js/**/*.js', srcPath+'/pug/blocks/**/*.js'],
         },
         css: [srcPath+'/scss/**/*.scss', srcPath+'/pug/blocks/**/*.scss'],
         fonts: srcPath+'/fonts/**/*',

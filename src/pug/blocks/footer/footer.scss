@@ -1,4 +1,173 @@
 .main-footer {
-	background-color: #000;
+	background-color: $blue500;
 	color: #fff;
+
+	&__logo {
+		@include media(md) {
+			display: none;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 1.65;
+		text-transform: uppercase;
+		margin-bottom: 1.8rem;
+
+		@include media(xl) {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__description {
+		color: rgba($white, 0.6);
+		line-height: 1.625;
+		font-weight: 500;
+
+		@include media(xl) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__left {
+		max-width: 376px;
+		margin-right: 10.9rem;
+
+		@include media(xl) {
+			max-width: 266px;
+			margin-right: 4rem;
+		}
+
+		@include media(lg) {
+			margin-right: 0;
+			margin-bottom: 4rem;
+			max-width: none;
+
+			br {
+				display: none;
+			}
+		}
+
+		@include media(md) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	&__nav {
+		margin-right: 3rem;
+		max-width: 25%;
+
+		@include media(md) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__right {
+		flex: 1 1 0;
+		margin-left: auto;
+		display: flex;
+		justify-content: space-between;
+
+		@include media(md) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__body {
+		padding: 4.8rem 0 2.4rem;
+		display: flex;
+		border-bottom: 1px solid $white;
+
+		@include media(lg) {
+			flex-wrap: wrap;
+		}
+
+		@include media(md) {
+			padding: 2.5rem 0 0;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		padding: 2.8rem 0 4.8rem;
+		justify-content: space-between;
+
+		@include media(md) {
+			padding: 1.5rem 0;
+			font-size: 1.3rem;
+		}
+	}
+
+	&__copyright {
+		padding-top: 1rem;
+
+		@include media(md) {
+			padding-top: 0;
+			flex: 1 1 0;
+		}
+	}
+
+	&__copyright-row {
+		margin-bottom: 1.7rem;
+		text-align: right;
+
+		@include media(md) {
+			text-align: center;
+		}
+
+		a {
+			color: #7dd7ff;
+		}
+
+		&:last-child {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__contact {
+		text-align: right;
+		padding-top: 2rem;
+
+		@include media(xl) {
+			padding-top: 1rem;
+		}
+
+		@include media(md) {
+			display: none;
+		}
+
+		.btn--blue {
+			padding-left: 3rem;
+			padding-right: 3rem;
+
+			@include media(xl) {
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+
+		.btn--link-blue {
+			font-size: 1.6rem;
+			font-weight: 600;
+		}
+	}
+
+	&__contact-social {
+		margin-bottom: 4rem;
+
+		@include media(xl) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__contact-row {
+		margin-bottom: 1.6rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

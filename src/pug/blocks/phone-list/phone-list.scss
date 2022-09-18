@@ -1,0 +1,28 @@
+.phone-list {
+	@extend %disable-list;
+	display: flex;
+	font-weight: 700;
+	color: $text-color-muted;
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&__item {
+		&:last-child {
+			margin-left: 42px;
+		}
+
+		.phone-list--column &:last-child {
+			margin-left: 0;
+		}
+
+		.mobile-nav & {
+			@extend .mobile-nav__section-row;
+		}
+	}
+
+	&__link {
+		@extend %disable-link;
+	}
+}

@@ -1,0 +1,21 @@
+.nav-more {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	list-style: none;
+	background-color: rgba($blue500, 0.98);
+	z-index: 1;
+	padding: 0;
+	box-shadow: 0 0 40px 0px rgba(#282c34, 0.3);
+	display: none;
+
+	&--open {
+		display: block;
+	}
+
+	&__link {
+		@extend .main-nav__link;
+		min-height: 0;
+		display: block;
+	}
+}

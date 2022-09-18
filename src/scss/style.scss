@@ -14,6 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-width: 320px;
+	color: $text-color-main;
 }
 
 /* ========================
@@ -25,6 +26,14 @@ START: COMPONENTS
 @import "../pug/blocks/btn/btn";
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav/main-nav";
+@import "../pug/blocks/nav-more/nav-more";
+@import "../pug/blocks/mobile-nav/mobile-nav";
+@import "../pug/blocks/address/address";
+@import "../pug/blocks/phone-list/phone-list";
+@import "../pug/blocks/footer-nav/footer-nav";
 /*========================
 END: COMPONENTS
 ========================*/
+.ta-center {
+	text-align: center;
+}

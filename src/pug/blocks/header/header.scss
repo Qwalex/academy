@@ -1,4 +1,25 @@
+body {
+	@include media(md) {
+		padding-top: 6.3rem;
+	}
+}
+
 .main-header {
+	transition: transform 0.25s;
+
+	@include media(md) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: translate(0, 0);
+		z-index: 9;
+	}
+
+	&--hidden {
+		transform: translate(0, -150%);
+	}
+
 	&__contacts {
 		padding: 16px 0;
 		background-color: $blue100;
@@ -6,15 +27,37 @@
 		@include media(xl) {
 			font-size: 1.5rem;
 		}
+
+		@include media(md) {
+			display: none;
+		}
 	}
 
 	&__body {
 		padding: 25px 0;
 		background-color: $blue300;
+
+		@include media(md) {
+			padding: 1rem 0 1rem;
+			min-height: 6.3rem;
+		}
 	}
 
 	&__body-row {
 		align-items: center;
+	}
+
+	&__body-left {
+		@include media(md) {
+			display: flex;
+		}
+	}
+
+	&__body-right {
+		@include media(md) {
+			display: none;
+			padding-top: 10px;
+		}
 	}
 
 	&__buttons {
@@ -37,36 +80,5 @@
 	&__callback {
 		display: flex;
 		justify-content: flex-end;
-	}
-}
-
-.address {
-	display: flex;
-	align-items: center;
-
-	&__ico {
-		line-height: 1;
-		margin-right: 18px;
-		color: $red;
-	}
-
-	&__text {
-		font-weight: 500;
-	}
-}
-
-.phone-list {
-	@extend %disable-list;
-	display: flex;
-	font-weight: 700;
-
-	&__item {
-		&:last-child {
-			margin-left: 42px;
-		}
-	}
-
-	&__link {
-		@extend %disable-link;
 	}
 }

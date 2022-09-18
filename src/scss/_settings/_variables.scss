@@ -6,8 +6,14 @@ $blue500: #1a72b2;
 $blue400: #0092d3;
 $blue300: #edf7ff;
 $blue100: #f8fcff;
+$blue50: #ecf6fe;
 $white: #fff;
 $red: #cb3851;
+$text-color-main: #0d324d;
+$text-color-muted: #525970;
+$text-color-blue: #0092d3;
+$text-color-purple: #757095;
+$text-color-red: $red;
 
 // Grid
 $grid-columns: 12 !default;
@@ -18,14 +24,14 @@ $grid-breakpoints: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1220px,
+	xl: 1369px,
 ) !default;
 
 $container-max-widths: (
 	sm: 540px,
 	md: 750px,
 	lg: 960px,
-	xl: 1200px,
+	xl: 1349px,
 ) !default;
 
 // This variable affects the `.m-*` and `.p-*` classes.

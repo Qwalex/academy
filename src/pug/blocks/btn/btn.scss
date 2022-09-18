@@ -10,6 +10,71 @@
 		min-height: 32px;
 	}
 
+	&--link-blue {
+		padding: 0;
+		color: #7dd7ff;
+		text-decoration: underline;
+		min-height: 0;
+		text-align: inherit;
+	}
+
+	&--blue {
+		color: $white;
+		background-color: $blue400;
+		min-height: 52px;
+
+		&:hover {
+			background-color: darken($blue400, 1%);
+		}
+
+		&:active {
+			background-color: darken($blue400, 2%);
+		}
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--mobile-toggle {
+		margin-left: auto;
+		min-height: 0;
+		padding: 0.5rem;
+		display: none;
+
+		@include media(md) {
+			display: block;
+		}
+
+		span {
+			display: block;
+			height: 4px;
+			width: 32.5px;
+			background-color: $blue500;
+			margin-top: 6px;
+			border-radius: 4px;
+			transition: all 0.25s;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&.is-open {
+			span:nth-child(1) {
+				transform: rotate(-41deg);
+				transform-origin: top right;
+			}
+			span:nth-child(2) {
+				opacity: 0;
+			}
+			span:nth-child(3) {
+				transform: rotate(41deg);
+				transform-origin: bottom right;
+			}
+		}
+	}
+
 	&--bordered-red {
 		background-color: $white;
 		border: 1px solid $red;
@@ -44,6 +109,7 @@
 		text-decoration: underline;
 		font-size: 1.6rem;
 		min-height: 0;
+		text-align: inherit;
 
 		@include media(xl) {
 			font-size: 1.5rem;

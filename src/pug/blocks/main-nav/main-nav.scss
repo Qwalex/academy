@@ -1,6 +1,10 @@
 .main-nav {
 	background-color: $blue500;
 
+	@include media(md) {
+		display: none;
+	}
+
 	&__list {
 		@extend %disable-list;
 		display: flex;
@@ -16,6 +20,7 @@
 		align-items: center;
 		min-height: 64px;
 		white-space: nowrap;
+		cursor: pointer;
 
 		@include media(xl) {
 			padding: 1rem 1rem;
@@ -35,12 +40,19 @@
 		}
 	}
 
+	&__item {
+		&[data-nav-more] {
+			display: none;
+			position: relative;
+		}
+
+		&--hidden {
+			display: none;
+		}
+	}
+
 	&__icon {
 		vertical-align: top;
 		margin-right: 0.98rem;
-
-		@include media(lg) {
-			display: none;
-		}
 	}
 }

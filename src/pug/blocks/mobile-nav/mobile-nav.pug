@@ -1,0 +1,18 @@
+mixin mobileNav(nav)
+  nav.mobile-nav.js-mobile-nav
+    .ta-center: .mobile-nav__section.mobile-nav__section--marked
+      +address.mobile-nav__section-row
+      +phoneList.phone-list--column
+    .mobile-nav__section.mobile-nav__section--no-pad
+      ul.mobile-nav__list
+        each val in nav
+          li.mobile-nav__item: a(href="#").mobile-nav__link=val
+    .mobile-nav__section
+      .mobile-nav__section-row
+        button(type="button").btn.btn--full.btn--bordered-red Вызов медсестры
+      .mobile-nav__section-row
+        button(type="button").btn.btn--full.btn--fill-red Записаться на прием
+      .mobile-nav__section-row
+        button(type="button").btn.btn--full.btn--fill-red Обратный звонок
+      .mobile-nav__section-row.d-flex.justify-content-center
+        +social

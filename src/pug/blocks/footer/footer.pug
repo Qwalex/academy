@@ -1,2 +1,28 @@
 mixin footer()
-  .main-footer main-footer
+  .main-footer
+    .container
+      .main-footer__body
+        .main-footer__left
+          .main-footer__title Добро пожаловать на сайт <br> “Академии здоровья”
+          .main-footer__description Медицинский центр «Академия здоровья» - многопрофильная медицинская организация частной системы здравоохранения Брянской области.
+        .main-footer__right 
+          .main-footer__nav
+            +footerNav('О центре', ['Акции', 'Врачи', 'Цены', 'Карта сайта'])
+          .main-footer__nav
+            +footerNav('Услуги', ['УЗИ', 'Гинекология', 'Невролог', 'Терапевт'])
+          .main-footer__nav
+            +footerNav('Анализы', ['УЗИ', 'Гинекология', 'Невролог', 'Терапевт' ])
+          .main-footer__contact
+            .main-footer__contact-social
+              +social.social--footer
+            .main-footer__contact-row
+              button(type="button").btn.btn--blue.btn--52 Записаться на прием
+            .main-footer__contact-row
+              button(type="button").btn.btn--link-blue Обратный звонок
+    .container: .main-footer__sep
+    .container
+      .main-footer__bottom
+        .main-footer__logo: +logo('light').logo--footer
+        .main-footer__copyright
+          p.main-footer__copyright-row Академия здоровья@ 2022. Все права защищены.
+          p.main-footer__copyright-row Сделано в студии <a href="#">Академия</a>

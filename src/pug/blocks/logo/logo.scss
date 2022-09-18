@@ -1,9 +1,14 @@
 .logo {
 	position: relative;
-	display: block;
 	display: inline-block;
+	vertical-align: top;
 	width: em(302px);
 	height: em(76px);
+
+	&--footer {
+		width: em(352px);
+		height: em(88.65px);
+	}
 
 	@include media(xl) {
 		font-size: 1.5rem;
@@ -11,6 +16,10 @@
 
 	@include media(lg) {
 		font-size: 1.3rem;
+	}
+
+	@include media(md) {
+		font-size: 0.9rem;
 	}
 
 	&__image {
@@ -26,5 +35,12 @@
 		color: #525970;
 		font-size: em(14px);
 		font-weight: 700;
+
+		.logo--footer & {
+			color: $white;
+			font-size: em(12px);
+			bottom: 0.8rem;
+			right: 6.4rem;
+		}
 	}
 }

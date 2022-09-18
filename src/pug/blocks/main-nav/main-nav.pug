@@ -1,0 +1,14 @@
+mixin mainNav(nav)
+  nav.main-nav.js-main-nav
+    .container 
+      ul.main-nav__list.js-main-nav-list
+        each val in nav
+          li.main-nav__item.js-main-nav-item
+            a(href="#").main-nav__link
+              if (val === 'COVID Тест')
+                img(src="img/cov.svg", alt="COVID тест").main-nav__icon
+                span=val
+              else
+                !=val
+        li.main-nav__item.js-nav-more-toggle.js-main-nav-item(data-nav-more="true")
+          span.main-nav__link Еще
