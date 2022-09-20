@@ -1,4 +1,7 @@
-mixin address
+mixin address(address)
   .address&attributes(attributes)
     span.address__ico: span.icm.icm-mark
-    span.address__text Адрес и график работы
+    if address
+      span.address__text=address
+    else
+      span.address__text Адрес и график работы

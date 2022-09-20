@@ -18,10 +18,13 @@
 		text-align: inherit;
 	}
 
+	&--52 {
+		min-height: 52px;
+	}
+
 	&--blue {
 		color: $white;
 		background-color: $blue400;
-		min-height: 52px;
 
 		&:hover {
 			background-color: darken($blue400, 1%);

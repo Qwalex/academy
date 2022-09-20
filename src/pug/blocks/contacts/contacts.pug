@@ -1,0 +1,27 @@
+mixin contacts
+  .contacts
+    .container
+      .contacts__info
+        .contacts__tabs
+          button.contacts__tabs-item.is-active(type="button") Советский район
+          button.contacts__tabs-item(type="button") Бежицкий район
+        .contacts__tabs-body
+          .contacts__tabs-content
+            .contacts__title Контакты
+            .contacts__address
+              +address('г. Брянск, пр-т Московский, д. 140')
+            ul.contacts__list
+              li.contacts__list-item
+                span.contacts__list-mark пн–пт: 
+                span 07:30–20:00
+              li.contacts__list-item
+                span.contacts__list-mark сб: 
+                span 07:30–19:00
+              li.contacts__list-item
+                span.contacts__list-mark вс:
+                span 07:30–17:00
+            +phoneList.contacts__phones
+            button(type="button").btn.btn--fill-red.btn--52 Записаться на прием
+          .contacts__tabs-content
+    .contacts__map#contactsMap
+      | <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9db8c86d2d0f1746af2d845c8f450dd4a5202b7c3ca53698dd2cae1b4ca51bfc&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>

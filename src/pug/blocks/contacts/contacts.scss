@@ -1,0 +1,103 @@
+.contacts {
+	.container {
+		position: relative;
+	}
+
+	&__title {
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: 0.02em;
+	}
+
+	&__address {
+		margin-bottom: 1.6rem;
+	}
+
+	&__list {
+		margin-bottom: 1.1rem;
+	}
+
+	&__phones {
+		margin-bottom: 2.1rem;
+	}
+
+	&__map {
+		height: 400px;
+	}
+
+	&__info {
+		top: 6rem;
+		position: absolute;
+		display: inline-block;
+		max-width: 472px;
+	}
+
+	&__list {
+		@extend %disable-list;
+	}
+
+	&__list-item {
+		display: inline-block;
+		margin-right: 3rem;
+	}
+
+	&__tabs {
+		display: flex;
+		width: 100%;
+		margin-bottom: 0.9rem;
+		background-color: white;
+	}
+
+	&__tabs-body {
+		background-color: white;
+		padding: 3rem;
+	}
+
+	&__tabs-item {
+		@extend %disable-btn;
+		flex: 1 1 0;
+		min-height: 53px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 1.5rem;
+		position: relative;
+
+		&.is-active {
+			color: $text-color-red;
+			background-color: #f6fbff;
+
+			&:before,
+			&:after {
+				content: "";
+
+				position: absolute;
+				left: 50%;
+			}
+
+			&:after {
+				background-color: $red;
+				height: 4px;
+				width: 90px;
+				margin-left: -45px;
+				bottom: 0;
+				border-radius: 7px 7px 0px 0px;
+			}
+
+			&:before {
+				border: 5px solid transparent;
+				border-bottom-color: $red;
+				height: 100px;
+				width: 100px;
+			}
+		}
+
+		&:first-child {
+			border-right: 1px solid #edf7ff;
+		}
+
+		&:last-child {
+			border-left: 1px solid #edf7ff;
+		}
+	}
+}
