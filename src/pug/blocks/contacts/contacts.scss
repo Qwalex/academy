@@ -1,6 +1,19 @@
 .contacts {
+	@include media (md) {
+		display: flex;
+		flex-direction: column;
+		background-color: $blue500;
+		padding-bottom: 4rem;
+	}
+
 	.container {
 		position: relative;
+		
+		@include media (md) {
+			order: 2;
+			
+			margin-top: -100px;
+		}
 	}
 
 	&__title {
@@ -8,29 +21,73 @@
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 0.02em;
+		margin-bottom: 2.2rem;
+
+		@include media(xl) {
+			font-size: 2.4rem;
+			margin-bottom: 1.7rem;
+		}
 	}
 
 	&__address {
 		margin-bottom: 1.6rem;
+		padding-left: 0.5rem;
 	}
 
 	&__list {
 		margin-bottom: 1.1rem;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+
+		@include media(xl) {
+			font-size: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__list-mark {
+		color: $red;
 	}
 
 	&__phones {
 		margin-bottom: 2.1rem;
+		font-size: 1.8rem;
+
+		@include media(xl) {
+			font-size: 1.6rem;
+			margin-bottom: 1.5rem;
+
+			.phone-list__item:first-child {
+				margin-right: 2rem;
+			}
+		}
 	}
 
 	&__map {
-		height: 400px;
+		height: 494px;
+
+		@include media (md) {
+			height: 350px;
+		}
 	}
 
 	&__info {
-		top: 6rem;
+		top: 4.5rem;
 		position: absolute;
 		display: inline-block;
 		max-width: 472px;
+
+		@include media(xl) {
+			max-width: 375px;
+		}
+
+		@include media(md) {
+			position: static;
+			max-width: none;
+			width: 100%;
+			box-shadow: 0 0 30px rgba(black, .1);
+		}
 	}
 
 	&__list {
@@ -39,7 +96,8 @@
 
 	&__list-item {
 		display: inline-block;
-		margin-right: 3rem;
+		margin-right: 2.6rem;
+		margin-bottom: 0.5rem;
 	}
 
 	&__tabs {
@@ -47,11 +105,20 @@
 		width: 100%;
 		margin-bottom: 0.9rem;
 		background-color: white;
+
+		@include media(md) {
+			margin-bottom: 0;
+			border-bottom: 1px solid #edf7ff;
+		}
 	}
 
 	&__tabs-body {
 		background-color: white;
 		padding: 3rem;
+
+		@include media(xl) {
+			padding: 2rem;
+		}
 	}
 
 	&__tabs-item {
@@ -62,6 +129,10 @@
 		font-weight: 700;
 		font-size: 1.5rem;
 		position: relative;
+
+		@include media (md) {
+			font-size: 1.3rem;
+		}
 
 		&.is-active {
 			color: $text-color-red;
@@ -87,8 +158,10 @@
 			&:before {
 				border: 5px solid transparent;
 				border-bottom-color: $red;
-				height: 100px;
-				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -2px;
+				bottom: 4px;
 			}
 		}
 
@@ -99,5 +172,12 @@
 		&:last-child {
 			border-left: 1px solid #edf7ff;
 		}
+	}
+
+	&__button {
+		font-size: 14px;
+		font-weight: 600;
+		width: 100%;
+		max-width: 221px;
 	}
 }

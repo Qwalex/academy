@@ -4,13 +4,19 @@
 	font-weight: 700;
 	color: $text-color-muted;
 
+	@include media (md) {
+		flex-wrap: wrap;
+	}
+
 	&--column {
 		flex-direction: column;
 	}
 
 	&__item {
-		&:last-child {
-			margin-left: 42px;
+		white-space: nowrap;
+
+		&:first-child {
+			margin-right: 42px;
 		}
 
 		.phone-list--column &:last-child {

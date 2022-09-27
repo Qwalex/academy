@@ -1,0 +1,8 @@
+mixin spec-card(item)
+    .spec-card
+        .spec-card__image: img(src=item.image, alt="")
+        .spec-card__title Проверьте силу иммунитета <br>за 2000₽
+        .spec-card__description=item.description
+        a(href="#").spec-card__more
+            span Подробнее
+            i.icm.icm-arrow-bold

@@ -1,0 +1,31 @@
+mixin first-screen
+    .first-screen
+        .container 
+            +slider-area.first-screen__slider-area
+                block slider 
+                    +slider
+            .first-screen__info
+                .first-screen__info-column.first-screen__info-column--covid
+                    .card.card--covid
+                        .card__icon: img(src="../img/cov.svg", alt="").card__icon-image
+                        .card__title Тест на COVID
+                        .card__button
+                            a(href="#").btn.btn--bordered-red Пройти
+                .first-screen__info-column
+                    .card
+                        .card__title
+                            .card__title-icon: i.icm.icm-pen
+                            .card__title-text Записаться на прием
+                        .card__description 
+                            p Администратор свяжется с вами для подтверждения записи. Медицинский центр «Академия здоровья» гарантирует полную конфиденциальность вашего обращения
+                        .card__button
+                            a(href="#").btn.btn--bordered-red Записаться
+                .first-screen__info-column
+                    .card
+                        .card__title
+                            .card__title-icon: i.icm.icm-phone
+                            .card__title-text Вызов медсестры
+                        .card__description 
+                            p Администратор свяжется с вами для подтверждения записи. Медицинский центр «Академия здоровья» гарантирует полную конфиденциальность вашего обращения
+                        .card__button
+                            a(href="#").btn.btn--bordered-red Вызвать медсестру

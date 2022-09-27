@@ -1,0 +1,67 @@
+.spec-slider-wrapper {
+    overflow: hidden;
+}
+
+.spec-slider {
+    &__swiper {
+        @include media (sm) {
+            width: 80%;
+            margin-left: 0 !important;
+        }
+
+        &.swiper {
+            overflow: visible;
+        }
+    }
+
+    &__nav {
+        @extend .home-slider__nav;
+        opacity: 0.5;
+        transition: all .25s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--prev {
+            @extend .home-slider__nav--prev;
+            margin-left: -19px;
+        }
+        
+        &--next {
+            @extend .home-slider__nav--next;
+            margin-right: -19px;
+        }
+    }
+
+    &__slide {
+        &.swiper-slide {
+            height: auto;
+            opacity: .4;
+            transition: opacity .25s;
+
+            @media screen and (min-width: 992px) {
+                &.swiper-slide-active,
+                &.swiper-slide-next,
+                &.swiper-slide-next + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+
+            @media screen and (min-width: 576px) {
+                &.swiper-slide-active,
+                &.swiper-slide-next {
+                    opacity: 1;
+                }
+            }
+
+            &.swiper-slide-active {
+                opacity: 1;
+            }
+
+            .spec-card {
+                height: 100%;
+            }
+        }
+    }
+}

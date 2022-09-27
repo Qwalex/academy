@@ -1,0 +1,11 @@
+mixin doc-card(item)
+    .doc-card
+        .doc-card__icon: i.icm.icm-cross
+        .doc-card__surname=item.surname
+        .doc-card__name=item.name
+        .doc-card__spec Врач ультразвуковой диагностики
+        .doc-card__image: img(src=item.image, alt="")
+        .doc-card__experience
+            span=item.experience
+        .doc-card__button
+            button.btn.btn--blue.btn--52 Записаться на прием

@@ -1,0 +1,49 @@
+.first-screen {
+    background: $blue350 url('../img/first-screen-pulse.svg') top 46px right no-repeat;
+    padding-bottom: 3.4rem;
+
+    &__info {
+        display: flex;
+        margin: 0 -0.8rem;
+
+        @include media (lg) {
+            flex-wrap: wrap;
+        }
+
+
+        @include media (lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__info-column {
+        margin-right: 1.6rem;
+
+        .card {
+            height: 100%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include media (lg) {
+            margin-bottom: 2rem;
+            margin-right: 0;
+            width: 100%;
+            flex: 1 1 50%;
+            padding: 0 0.8rem;
+
+            .card--covid {
+                width: 100%;
+                flex: 1 1 50%;
+            }
+        }
+    }
+
+    &__slider-area {
+        @include media(lg) {
+            margin-bottom: 3rem;
+        }
+    }
+}

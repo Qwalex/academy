@@ -1,0 +1,182 @@
+.slider-area {
+    &__row {
+        padding: 2.5rem 0 8px;
+        display: flex;
+        align-items: center;
+
+        @include media (lg) {
+            flex-direction: column;
+        }
+
+        @include media (md) {
+            padding-top: 1rem;
+        }
+    }
+
+    &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__left {
+        flex: 1 1 0;
+    }
+
+    &__text {
+        flex: 0 1 30%;
+        padding-right: 23px;
+    }
+
+    &__slider-column {
+        flex: 0 1 952px;
+        width: 0;
+
+        @include media (xl) {
+            flex: 0 1 671px;
+        }
+
+        @include media (lg) {
+            width: 100%;
+            flex: 1 1 auto;
+            order: -1;
+            margin-bottom: 2rem;
+        }
+
+        @include media (md) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__slider {
+        padding: 0 16px;
+        position: relative;
+
+        @include media (md) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 3px;
+        line-height: 1.37;
+
+        @include media (xl) {
+            font-size: 2.7rem;
+        }
+
+        @include media (md) {
+            font-size: 2.1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__date {
+        background-color: $white;
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $blue500;
+        margin-bottom: 2.9rem;
+
+        @include media (xl) {
+            padding: 3px 6px;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__description {
+    
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+
+        @include media (md) {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin: 1.3rem 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media (md) {
+            .fz-18 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__dots {
+        display: flex;
+        height: 16px;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+
+    &__dots-item {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background-color: #00B0FF;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: box-shadow .24s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            background-color: $white;
+            box-shadow: 0 0 0 4px #00B0FF;
+        }
+    }
+
+    &__timer {
+        height: 7px; 
+        background-color: $white;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden; 
+    }
+
+    &__timer-indicator {
+        border-radius: 4px;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #00B0FF;
+    }
+
+    &__button {
+        margin-bottom: 1rem;
+
+        .btn {
+            @include media (xl) {
+                min-height: 3.6rem;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 25px;
+
+        @include media (lg) {
+            display: none;
+        }
+    }
+}

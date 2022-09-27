@@ -1,19 +1,52 @@
 // Font family
 $ff-primary: "Manrope", sans-serif;
 
+@function hoverColor($color) {
+	@return lighten($color, 1%);
+}
+
+@function activeColor($color) {
+	@return darken($color, 1%);
+}
+
 // Colors
 $blue500: #1a72b2;
+$blue500-hover: hoverColor(#1a72b2);
+$blue500-active: activeColor(#1a72b2);
 $blue400: #0092d3;
+$blue400-hover: hoverColor(#0092d3);
+$blue400-active: activeColor(#0092d3);
+$blue350: #E2F1FC;
+$blue350-hover: hoverColor(#E2F1FC);
+$blue350-active: activeColor(#E2F1FC);
 $blue300: #edf7ff;
+$blue300-hover: hoverColor(#edf7ff);
+$blue300-active: activeColor(#edf7ff);
 $blue100: #f8fcff;
+$blue100-hover: hoverColor(#f8fcff);
+$blue100-active: activeColor(#f8fcff);
 $blue50: #ecf6fe;
+$blue50-hover: hoverColor(#ecf6fe);
+$blue50-active: activeColor(#ecf6fe);
 $white: #fff;
 $red: #cb3851;
+$red-hover: hoverColor(#cb3851);
+$red-active: activeColor(#cb3851);
 $text-color-main: #0d324d;
+$text-color-main-hover: hoverColor(#0d324d);
+$text-color-main-active: activeColor(#0d324d);
 $text-color-muted: #525970;
+$text-color-muted-hover: hoverColor(#525970);
+$text-color-muted-active: activeColor(#525970);
 $text-color-blue: #0092d3;
+$text-color-blue-hover: hoverColor(#0092d3);
+$text-color-blue-active: activeColor(#0092d3);
 $text-color-purple: #757095;
+$text-color-purple-hover: hoverColor(#757095);
+$text-color-purple-active: activeColor(#757095);
 $text-color-red: $red;
+$text-color-red-hover: hoverColor($red);
+$text-color-red-active: activeColor($red);
 
 // Grid
 $grid-columns: 12 !default;

@@ -1,9 +1,14 @@
 .btn {
 	@extend %disable-btn;
+	@extend %disable-link;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-size: 1.5rem;
 	border-radius: 8px;
 	padding: 2px 24px 3px;
 	min-height: 36px;
+	text-align: center;
 
 	@include media(lg) {
 		padding: 2px 12px 3px;

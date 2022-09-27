@@ -32,9 +32,34 @@ START: COMPONENTS
 @import "../pug/blocks/phone-list/phone-list";
 @import "../pug/blocks/footer-nav/footer-nav";
 @import "../pug/blocks/contacts/contacts";
+@import "../pug/blocks/first-screen/first-screen";
+@import "../pug/blocks/slider/slider";
+@import "../pug/blocks/home-slider/home-slider";
+@import "../pug/blocks/slider-area/slider-area";
+@import "../pug/blocks/card/card";
+@import "../pug/blocks/spec/spec";
+@import "../pug/blocks/section/section";
+@import "../pug/blocks/spec-card/spec-card";
+@import "../pug/blocks/spec-slider/spec-slider";
+@import "../pug/blocks/doctors/doctors";
+@import "../pug/blocks/text-area/text-area";
+@import "../pug/blocks/doc-slider/doc-slider";
+@import "../pug/blocks/doc-card/doc-card";
+
+@import "../pug/blocks/head/head";
+// ##
+@import "../../node_modules/swiper/swiper.scss";
 /*========================
 END: COMPONENTS
 ========================*/
 .ta-center {
 	text-align: center;
+}
+
+.fz-18 {
+	font-size: 1.8rem;
+}
+
+.bold {
+	font-weight: 800;
 }

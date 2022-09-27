@@ -1,0 +1,25 @@
+mixin slider-area
+    .slider-area&attributes(attributes)
+        .slider-area__row
+            .slider-area__left
+                each i in [1,2,3,4,5,6,7]
+                    - const url = 123;
+                    .slider-area__item.js-home-slider-text-item(class=`${(i === 1) ? 'slider-area__item--active' : ''}`)
+                        .slider-area__text
+                            .slider-area__title=`Акция! ${i}`
+                            .slider-area__date С 1 февраля по 31 марта
+                            .slider-area__description
+                                p.bold.fz-18 Тест на коронавирус РНК.<br>SARS-CoV-2 (COVID-19)
+                                p *Срок выполнения: в течение 24 часов с момента доставки биоматериала в лабораторию
+                            .slider-area__button
+                                a(href="#").btn.btn--blue.btn--52 Подробнее
+            .slider-area__slider-column
+                .slider-area__slider
+                    block
+        .slider-area__bottom
+            .slider-area__dots.js-home-slider-pagination
+                .slider-area__dots-item
+                .slider-area__dots-item
+                .slider-area__dots-item
+            .slider-area__timer
+                .slider-area__timer-indicator(style="width: 50%;").js-home-slider-autoplay

@@ -1,0 +1,44 @@
+mixin doc-slider
+    .doc-slider
+        .doc-slider__swiper
+            -
+                const items = [
+                    {
+                        surname: 'Абрамова',
+                        name: 'Ирина Леонидовна',
+                        experience: 5,
+                        image: '../img/doc-1.png',
+                    },
+                    {
+                        surname: 'Резник',
+                        name: 'Светлана Анатольевна',
+                        experience: 10,
+                        image: '../img/doc-2.png',
+                    },
+                    {
+                        surname: 'Винник',
+                        name: 'Дмитрий Владимирович',
+                        experience: 10,
+                        image: '../img/doc-1.png',
+                    },
+                    {
+                        surname: 'Раневский',
+                        name: 'Иван Александрович',
+                        experience: 7,
+                        image: '../img/doc-4.png',
+                    },
+                    {
+                        surname: 'Абрамова',
+                        name: 'Ирина Леонидовна',
+                        experience: 5,
+                        image: '../img/doc-1.png',
+                    },
+                    {
+                        surname: 'Абрамова',
+                        name: 'Ирина Леонидовна',
+                        experience: 5,
+                        image: '../img/doc-2.png',
+                    },
+                ]
+            each item in items
+                .doc-slider__slide: +doc-card(item)
