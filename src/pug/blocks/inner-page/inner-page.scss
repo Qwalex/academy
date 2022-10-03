@@ -1,0 +1,44 @@
+.inner-page {
+    background-color: $blue300;
+
+    &__row {
+        display: flex;
+        margin: 0 -12px;
+
+        @include media (lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__aside {
+        flex: 0 0 296px;
+        max-width: 296px;
+        padding: 0 12px;
+
+        @include media (xl) {
+            flex: 0 0 260px;
+            max-width: 260px;
+        }
+
+        @include media (lg) {
+            flex: 0 1 auto;
+            max-width: none;
+        }
+    }
+
+    &__main {
+        padding: 0 12px;
+        flex: 1 1 0;
+        width: 0;
+        padding-bottom: 56px;
+
+        @include media (lg) {
+            flex: 0 1 auto;
+            width: 100%;
+        }
+
+        @include media (sm) {
+            padding-bottom: 30px;
+        }
+    }
+}

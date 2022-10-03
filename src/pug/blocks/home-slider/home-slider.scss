@@ -29,11 +29,17 @@
         margin-top: -20px;
         cursor: pointer;
 
+        .text-area & {
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+        }
+
         &.swiper-button-disabled {
             display: none;
         }
 
-        @include media (md) {
+        @include media (sm) {
             display: none;
         }
 

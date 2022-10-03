@@ -1,0 +1,38 @@
+.service-slider {
+    position: relative;
+
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        transition: opacity .25s;
+        opacity: 0;
+
+        &-active,
+        &-next {
+            opacity: 1;
+        }
+
+        @media screen and (min-width: 992px) {
+            &-next + .swiper-slide,
+            &-next + .swiper-slide + .swiper-slide,
+            &-next + .swiper-slide + .swiper-slide + .swiper-slide {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            &-next + .swiper-slide,
+            &-next + .swiper-slide + .swiper-slide {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (min-width: 480px) {
+            &-next + .swiper-slide {
+                opacity: 1;
+            }
+        }
+    }
+}

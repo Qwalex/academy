@@ -65,7 +65,6 @@ export default class HomeSlider extends Slider {
     }
 
     startAutoPlayIndicator() {
-        console.log('start auto play indicator')
         this.stopAutoPlayIndicator();
         this.$autoPlayIndicator.animate({
             width: '100%',

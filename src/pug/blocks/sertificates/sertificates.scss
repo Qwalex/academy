@@ -1,0 +1,12 @@
+.sertificates {
+    background: #EDF7FF;
+    padding-bottom: 79px;
+
+    @include media (md) {
+        padding-bottom: 50px;
+    }
+
+    &__text-area {
+        margin-bottom: 16px;
+    }
+}

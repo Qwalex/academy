@@ -5,7 +5,7 @@
 .spec-slider {
     &__swiper {
         @include media (sm) {
-            width: 80%;
+            width: 90%;
             margin-left: 0 !important;
         }
 

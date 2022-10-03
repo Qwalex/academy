@@ -1,0 +1,7 @@
+mixin breadcrumbs(breadcrumbs = [1,2])
+    ul.breadcrumbs
+        each item in breadcrumbs
+            if item === breadcrumbs[breadcrumbs.length - 1]
+                li.breadcrumbs__item=item
+            else 
+                li.breadcrumbs__item: a(href="#").breadcrumbs__link=item

@@ -1,0 +1,77 @@
+.sertificates-slider-wrapper {
+    overflow: hidden;
+}
+
+.sertificates-slider {
+    position: relative;
+
+    &__swiper {
+        @include media (sm) {
+            width: 90%;
+            margin-left: 0 !important;
+        }
+
+        &.swiper {
+            overflow: visible;
+        }
+    }
+
+    &__nav {
+        @extend .home-slider__nav;
+        opacity: 0.5;
+        transition: all .25s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--prev {
+            @extend .home-slider__nav--prev;
+            @extend .reviews-slider__nav--prev;
+        }
+        
+        &--next {
+            @extend .home-slider__nav--next;
+            @extend .reviews-slider__nav--next;
+        }
+    }
+
+    &__slide {
+        img {
+            width: 100%;
+        }
+
+        &.swiper-slide {
+            height: auto;
+            opacity: .5;
+            transition: opacity .25s;
+
+            @media screen and (min-width: 992px) {
+                &.swiper-slide-active,
+                &.swiper-slide-next,
+                &.swiper-slide-next + .swiper-slide,
+                &.swiper-slide-next + .swiper-slide + .swiper-slide,
+                &.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+
+            @media screen and (min-width: 576px) {
+                &.swiper-slide-active,
+                &.swiper-slide-next, 
+                &.swiper-slide-next + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+
+            &.swiper-slide-active,
+            &.swiper-slide-next {
+                opacity: 1;
+            }
+
+            .sertificates-card {
+                height: 100%;
+            }
+        }
+    }
+}

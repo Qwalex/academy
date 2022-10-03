@@ -1,7 +1,12 @@
 .doctors {
     background: $blue300;
+    padding-bottom: 0;
 
     &__head {
         margin-bottom: 5px;
+    }
+
+    &__text-area {
+        margin-bottom: 28px;
     }
 }

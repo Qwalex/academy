@@ -1,0 +1,26 @@
+mixin analyzes-item(item)
+    .analyzes-item(data-id=`id-${item}` data-name="Общий анализ крови с лейкоцитарной формулой (без СОЭ)", data-price="1300", data-code="097506").js-analyzes-item
+        .analyzes-item__row
+            .analyzes-item__column.analyzes-item__column--1
+                .analyzes-item__check
+                    +checkbox({
+                        checkboxClass: 'js-analyzes-item-checkbox',
+                    })
+                .analyzes-item__info
+                    .analyzes-item__name Общий анализ крови с лейкоцитарной формулой (без СОЭ)
+                    ul.analyzes-item__props
+                        li.analyzes-item__props-item Срок выполнения 1 день
+                        li.analyzes-item__props-item Можно сдать на дому
+            .analyzes-item__column.analyzes-item__column--2
+                .analyzes-item__column-price
+                    .analyzes-item__price 1300 <i class="icm icm-rub"></i>
+                .analyzes-item__column-cart
+                    .analyzes-item__cart
+                        .analyzes-item__info
+                            span.btn.btn--blue-bd.btn--rect.ez-tooltip ?
+                                .ez-tooltip__content
+                                    .ez-tooltip__content-inner
+                                        p Lorem ipsum dolor sit amet consectetur
+                        .analyzes-item__button
+                            button.btn.btn--blue.js-analyzes-item-to-cart В&nbsp;корзину
+                    .analyzes-item__code Код: 097506

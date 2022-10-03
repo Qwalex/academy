@@ -39,9 +39,6 @@ export default class navMore {
   }
 
   getItem(item) {
-    console.log({
-      item
-    })
     const $link = item.$item.find('a');
     const href = $link.attr('href');
     const title = $link.html();

@@ -1,0 +1,13 @@
+.sertificates-card {
+    opacity: 0.6;
+    transition: opacity .25s;
+    cursor: pointer;
+
+    img {
+        max-width: 100%;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,14 @@
+.about-sert {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+
+    &__column {
+        padding: 0 8px;
+        margin-bottom: 16px;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}

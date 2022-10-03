@@ -1,0 +1,37 @@
+.breadcrumbs {
+    @extend %disable-list;
+    display: flex;
+    
+    @include media (sm) {
+        overflow: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+
+    &__item {
+        font-weight: 500;
+        color: #395970;
+        font-size: 14px;
+
+        @include media (sm) {
+            font-size: 12px;
+        }
+
+        &:not(:last-child):after {
+            content: '';
+            font-family: icomoon;
+            font-size: 8px;
+            margin: 0 8px;
+            color: #1A72B2;
+
+            @include media(sm) {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    &__link {
+        @extend %disable-link;
+         color: #1A72B2;
+    }
+}

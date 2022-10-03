@@ -1,0 +1,9 @@
+.tabs {
+    &__body-item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}

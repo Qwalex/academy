@@ -1,0 +1,43 @@
+extends templates/_default
+
+block head 
+	title Home
+
+block header 
+	+header
+
+block main
+	+inner-top('Вопросы и ответы', ['Главная', 'О центре', 'Вопросы и ответы'])
+	+inner-page
+		block innerAside 
+			+inner-nav('О центре', ['Описание', 'Лицензии и сертификаты', 'Вопросы и ответы', 'Политика конфиденциальности'], 'Вопросы и ответы')
+			+aside-spec
+		block innerMain
+			.text-area.text-area--button.about-faq__text-area.mb-16
+				span.text-area__text Нам очень важно знать ваше мнение о нашей работе. Будем вам благодарны за любую информацию, которая позволит нам улучшить свою работу.
+				span.text-area__button: a(href="#").btn.btn--blue.btn--52 Задать вопрос
+			.text-area
+				.text-area__section
+					.text-area__header Общие вопросы
+					.text-area__body
+						-
+							const faq = [
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+							]
+						+faq(faq)
+				.text-area__section
+					.text-area__header Вопросы по комплексным программам
+					.text-area__body
+						-
+							const faq2 = [
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+							]
+						+faq(faq2)
+
+block footer
+	+contacts
+	+footer

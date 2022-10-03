@@ -17,7 +17,6 @@ export default class Header {
   }
 
   scroll() {
-    console.log('scroll')
     const st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > this.lastScrollTop && st > this.$header.outerHeight()){
       this.$header.addClass(this.classes.header.hidden);

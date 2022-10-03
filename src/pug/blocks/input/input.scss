@@ -1,0 +1,53 @@
+.input,
+.textarea {
+    background :#F4F9FE;    
+    border: 1px solid #DCF0FA;
+    border-radius: 4px;
+    transition: border .25s;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #536E83;
+    padding: 8px 10px;
+    min-height: 56px;
+
+    display: flex;
+
+    &--focus,
+    &:focus {
+        border-color: $blue500;
+    }
+
+    &__icon {
+        display: flex;
+        flex: 0 1 auto;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $white;
+        margin-right: 10px;
+        color: #0092D3;
+        font-size: 20px;
+
+        .icm-form-person {
+            font-size: .94      em;
+        }
+    }
+
+    &__input {
+        flex: 1 1 0;
+        border: none;
+        background: none;
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-family: inherit;
+    }
+}
+
+.textarea {
+    min-height: 86px;
+}

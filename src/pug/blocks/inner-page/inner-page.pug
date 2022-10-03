@@ -1,0 +1,9 @@
+mixin inner-page(wide)
+	.inner-page
+		.container
+			.inner-page__row
+				if (!wide)
+					aside.inner-page__aside
+						block innerAside
+				main.inner-page__main
+					block innerMain

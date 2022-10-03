@@ -1,0 +1,23 @@
+mixin spoiler(header, icon, isOpen)
+    .spoiler.js-spoiler(class=`${(isOpen) ? 'spoiler--open' : ''}`)
+        .spoiler__header.js-spoiler-header
+            if (icon)
+                span.spoiler__header-icon=icon
+            span.spoiler__header-text=header
+        .spoiler__body.js-spoiler-body
+            .spoiler__body-inner
+                block
+
+mixin doc-spoiler(item, isOpen)
+    .spoiler.spoiler--doc.js-spoiler(class=`${(isOpen) ? 'spoiler--open' : ''}`)
+        .spoiler__header.js-spoiler-header
+            span.spoiler__header-text=item.header
+            span.spoiler__tip=item.tip
+        .spoiler__body.js-spoiler-body
+            .spoiler__body-inner
+                .spoiler__content
+                    .spoiler__body-title=item.body.title
+                    .spoiler__tip--mobile=item.tip
+                    .spoiler__body-description=item.body.description
+                    .spoiler__body-button: button(type="button").btn.btn--fill-red.btn--52 Записаться на прием
+                .spoiler__image: img(src=item.image, alt="")

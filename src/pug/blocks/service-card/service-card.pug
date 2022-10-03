@@ -1,0 +1,6 @@
+mixin service-card(item, key)
+    a(href="#").service-card&attributes(attributes)
+        .service-card__image(class=`service-card__image--${key + 1}`)
+        .service-card__title
+            span=item.title
+            span.service-card__icon: i.icm.icm-cross

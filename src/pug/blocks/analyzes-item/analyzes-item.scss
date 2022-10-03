@@ -1,0 +1,132 @@
+.analyzes-item {
+    border: 1px solid #E0F0FF;
+    border-radius: 8px;
+    padding: 16px 16px 0;
+
+    @include media (sm) {
+        padding: 10px;
+    }
+
+    .checkbox {
+        margin-right: 16px;
+    }
+
+    &__name {
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 2px;
+    }
+
+    &__check, &__name {
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__price {
+        display: inline-block;
+        background-color: #F6FBFF;
+        padding: 9px;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1A72B2;
+        line-height: 1;
+        flex: 0 1 128px;
+        width: 128px;
+        text-align: center;
+        max-width: 100%;
+
+        @include media (xl) {
+            width: auto;
+            padding: 9px 19px;
+        }
+
+        .icm-rub {
+            font-size: .7em;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        justify-content: space-between;
+
+        @include media (sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        padding: 0 15px;
+        margin-bottom: 16px;
+
+        &--1 {
+            display: flex;
+            align-items: flex-start;
+            flex: 1 1 auto;
+
+            @include media (xl) {
+                flex: 1 1 0;
+            }
+        }
+
+        &--2 {
+            display: flex;
+            
+            justify-content: space-between;
+            flex: 0 1 auto;
+
+            @include media (xl) {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            @include media (sm) {
+                flex: 1 1 0;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__column-price {
+        margin-right: 60px;
+
+        @include media (xl) {
+            margin-right: 0;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        margin-bottom: 22px;
+    }
+
+    &__button {
+        margin-left: 16px;
+    }
+
+    &__code {
+        text-align: right;
+        font-size: 14px;
+    }
+
+    &__props {
+        margin: 0 !important;
+        display: flex;
+        flex-wrap: wrap;   
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__props-item {
+        margin: 16px 10px 0 !important;
+        flex: 0 1 auto;
+    }
+}

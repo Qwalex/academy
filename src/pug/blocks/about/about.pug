@@ -1,0 +1,50 @@
+mixin about
+    section.about.section
+        .container
+            +head('Многопрофильный медицинский центр «Академия здоровья»').about__head
+        .about__top
+            .container
+                .about__top-row
+                    .about__slider
+                        .about-slider
+                            .about-slider__slider.swiper.js-about-slider
+                                .swiper-wrapper
+                                    .about-slider__slide.swiper-slide: img(src="img/about-slider.jpg", alt="")
+                                    .about-slider__slide.swiper-slide: img(src="img/about-slider.jpg", alt="")
+                                    .about-slider__slide.swiper-slide: img(src="img/about-slider.jpg", alt="")
+                            .js-about-slider-prev.about-slider__nav.about-slider__nav--prev: i.icm.icm-arrow-left
+                            .js-about-slider-next.about-slider__nav.about-slider__nav--next: i.icm.icm-arrow-right
+                    .about__right
+                        .about__factors 
+                            .about__factors-number 3
+                            .about__factors-text ключевых <br>фактора
+                        .about__description
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam
+                        .about__button
+                            a(href="#").btn.btn--fill-red.about__button-btn Подробнее
+        .about__features
+            .container
+                .about__features-row
+                    -
+                        const features = [
+                            {
+                                feature: 'Профессионализм',
+                                image: 'img/feature-1.svg',
+                            },
+                            {
+                                feature: 'передовое оборудование',
+                                image: 'img/feature-2.svg',
+                            },
+                            {
+                                feature: 'современные технологии',
+                                image: 'img/feature-3.svg',
+                            },
+                        ]
+                    each item, key in features
+                        .about__features-column
+                            +feature-card(item, key)
+                .about__more
+                    a(href="#").btn.btn--blue.btn--full.btn--52
+                        span.about__more-text Продолжить знакомство
+                        span.about__more-icon: i.icm.icm-arrow-right

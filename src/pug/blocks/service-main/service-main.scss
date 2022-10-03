@@ -1,0 +1,71 @@
+.service-main {
+    padding-bottom: 16px;
+    margin-bottom: 64px;
+
+    @include media (md) {
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+
+        @include media (sm) {
+            margin: 0 -5px;
+
+            &--offset {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__column {
+        padding: 0 8px;
+        margin-bottom: 16px;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        
+        @include media (xl) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        
+        @include media (lg) {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+
+        @include media (md) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @include media (sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 4px;
+            margin-bottom: 8px;
+        }
+
+        &--sm {
+            flex: 0 0 25%;
+            max-width: 25%;
+
+            @include media (xl) {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+
+            @include media (lg) {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            @include media (md) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}

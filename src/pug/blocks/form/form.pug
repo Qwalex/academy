@@ -1,0 +1,14 @@
+mixin form
+    form(action="#").form.js-form
+        .form__body
+            .form__row
+                .form__column
+                    +input-icon('Ваше имя', 'name', 'text', 'icm-form-person')
+                .form__column
+                    +input-icon('Номер телефона', 'phone', 'phone', 'icm-form-phone')
+            .form__row
+                .form__column
+                    +textarea('Комментарий', 'comment')
+        .form__footer
+            .form__submit: button(type="submit").btn.btn--fill-red.btn--52 Оправить заявку
+            .form__rules Нажимая на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a class="link" href="#">пользовательским соглашением</a>

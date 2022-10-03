@@ -1,0 +1,6 @@
+mixin faq(items)
+    .faq
+        each item, key in items
+            .faq__item
+                +spoiler(item[0], '?', ((key === 0) ? true : false))
+                    p=item[1]

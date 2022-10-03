@@ -14,10 +14,10 @@ body {
 		right: 0;
 		transform: translate(0, 0);
 		z-index: 9;
-	}
 
-	&--hidden {
-		transform: translate(0, -150%);
+		&--hidden {
+			transform: translate(0, -150%);
+		}
 	}
 
 	&__contacts {

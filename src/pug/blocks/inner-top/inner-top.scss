@@ -1,0 +1,19 @@
+.inner-top {
+    padding: 17px 0 20px;
+    background-color: $blue300;
+
+    &__header {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.343;
+        margin-bottom: 16px;
+
+        @include media (md) {
+            font-size: 27px;
+        }
+
+        @include media (sm) {
+            font-size: 22px;
+        }
+    }    
+}

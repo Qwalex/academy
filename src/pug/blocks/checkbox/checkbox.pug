@@ -1,0 +1,5 @@
+mixin checkbox(item = {})
+    label.checkbox&attributes(attributes)
+        - const checkboxClass = item.checkboxClass || '';
+        input(type="checkbox" class=checkboxClass).checkbox__input
+        span.checkbox__icon

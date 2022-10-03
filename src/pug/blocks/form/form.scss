@@ -1,0 +1,60 @@
+.form {
+    background-color: $white;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+
+    &__column {
+        flex: 1 1 0;
+        margin-bottom: 8px;
+        padding: 0 8px;
+    }
+
+    &__body {
+        margin-bottom: 25px;
+    }
+
+    &__footer {
+        display: flex;
+
+        @include media (xl) {
+            display: block;
+        }
+    }
+
+    &__submit {
+        flex: 0 1 auto;
+        margin-right: 19px;
+
+        @include media (xl) {
+            margin-bottom: 16px;
+            margin-right: 0;
+        }
+
+        @include media (md) {
+            text-align: center;
+        }
+
+        .btn {
+            min-width: 213px;
+
+            @include media (sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__rules {
+        flex: 1 1 0;
+        color: #666;
+        font-size: 13px;
+        line-height: 1.384;
+
+        @include media (md) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+mixin service-mini(item)
+    a(href="#").service-mini
+        .service-mini__cross: i.icm.icm-cross
+        .service-mini__icon: i.icm(class=`icm-${item.icm}`)
+        .service-mini__title=item.title

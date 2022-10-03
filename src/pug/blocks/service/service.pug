@@ -1,0 +1,25 @@
+mixin service 
+    section.service.section.spec-slider-wrapper
+        .container
+            +head('Услуги', 'Смотреть  все').doctors__head
+            .text-area.doctors__text-area Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .service__list
+                -
+                    const items = [
+                        {
+                            title: 'Диагностика',
+                        },
+                        {
+                            title: 'Лаборатория',
+                        },
+                        {
+                            title: 'Диагностика',
+                        },
+                    ]
+                each item, key in items
+                    .service__column
+                        +service-card(item, key)
+            +service-slider
+
+
+                

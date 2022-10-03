@@ -1,0 +1,19 @@
+mixin analyzes-list(items)
+    .analyzes-list.js-analyzes-list
+        .analyzes-list__top
+            label.analyzes-list__all
+                +checkbox({
+                    checkboxClass: 'js-analyzes-list-all',
+                })
+                span Выбрать все
+            .analyzes-list__card
+                button.analyzes-list__card.btn.btn--fill-red(data-fancybox="single" data-group="false" data-src="#modal-cart")
+                    span.hide-sm В корзину&nbsp;
+                    span.only-sm
+                        i.icm.icm-cart
+                        span.analyzes-list__card-count.js-cart-item-count
+                    span.hide-sm <span class="js-cart-item-count" data-pattern="(count)"></span>
+        .analyzes-list__items
+            each item in items
+                .analyzes-list__item
+                    +analyzes-item(item)

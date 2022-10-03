@@ -1,0 +1,102 @@
+.info-tabs {
+    &__header {
+        background-color: $white;
+        border-radius: 8px 8px 0 0;
+        padding: 0 17px;
+        display: flex;
+        margin-bottom: 4px;
+        overflow: auto;
+        white-space: nowrap;
+
+        @include media (xl) {
+            padding: 0 15px;
+            justify-content: space-around;
+            text-align: center;
+        }
+    }
+
+    &__header-item {
+        font-size: 15px;
+        padding: 13px 16px 14px;
+        margin: 0 15px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include media (xl) {
+            margin: 0 5px;
+            padding: 15px 5px;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            border-radius: 50%;
+            min-width: 6px;
+            height: 6px;
+            flex: 0 0 6px;
+            margin-left: 6px;
+            margin-bottom: 0.5em;
+            background-color: #AB283F;
+            border-radius: 50%;
+            transition: opacity .25s;
+            display: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-radius: 4px 4px 0 0;
+            background-color: #0092D3;
+            height: 4px;
+            bottom: 0;
+            left: 14px;
+            right: 14px;
+            opacity: 0;
+            transition: opacity .25s;
+
+            @include media (xl) {
+                left: 4px;
+                right: 4px;
+            }
+        }
+
+        &--active {
+            &:after,
+            &:before {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__header-counter {
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        background-color: #CB3851;
+        margin-left: 6px;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: 12px;
+        line-height: 1;
+        vertical-align: top;
+    }
+
+    &__item {
+        overflow: hidden;
+    }
+}

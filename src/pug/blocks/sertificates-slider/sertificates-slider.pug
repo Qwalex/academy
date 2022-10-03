@@ -1,0 +1,7 @@
+mixin sertificates-slider(count = 5)
+    .sertificates-slider&attributes(attributes)
+        .sertificates-slider__swiper.swiper.js-sertificates-slider(data-items-count=count)
+            .swiper-wrapper
+                block
+        .js-sertificates-slider-prev.sertificates-slider__nav.sertificates-slider__nav--prev: i.icm.icm-arrow-left
+        .js-sertificates-slider-next.sertificates-slider__nav.sertificates-slider__nav--next: i.icm.icm-arrow-right

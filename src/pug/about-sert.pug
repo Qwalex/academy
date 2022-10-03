@@ -1,0 +1,19 @@
+extends templates/_default
+
+block head 
+	title Home
+
+block header 
+	+header
+
+block main
+	+inner-top('О центре', ['Главная', 'О центре', 'Лицензии и сертификаты'])
+	+inner-page
+		block innerAside 
+			+inner-nav('О центре', ['Описание', 'Лицензии и сертификаты', 'Вопросы и ответы', 'Политика конфиденциальности'], 'Лицензии и сертификаты')
+			+aside-spec
+		block innerMain
+			+about-sert
+block footer
+	+contacts
+	+footer

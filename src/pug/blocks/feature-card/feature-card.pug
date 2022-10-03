@@ -1,0 +1,13 @@
+mixin feature-card(item, key)
+    .feature-card
+        .feature-card__number=(key + 1)
+        .feature-card__cross: i.icm.icm-cross
+        .feature-card__inner
+            .feature-card__feature=item.feature
+            .feature-card__image: img(src=item.image, alt="")
+            .feature-card__description
+                if key === 1
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                else
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                    P Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam

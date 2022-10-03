@@ -1,0 +1,36 @@
+extends templates/_default
+
+block head 
+	title Home
+
+block header 
+	+header
+
+block main
+	+inner-top('Услуги', ['Главная', 'Услуги', 'Кардиология'])
+	+inner-page
+		block innerAside 
+			-
+				const navItems = [
+					'Гинеколог',
+					'Терапевт',
+					'Неврология',
+					'Кардиология',
+					'Эндокринолог',
+					'Анализы',
+					'Узи',
+					'Гастроэнтеролог',
+					'Функциональная диагностика',
+					'Медицинский массаж',
+					'Уролог',
+					'Видеокольпоскопия',
+					'Дневной стационар',
+				]
+			+inner-nav('Услуги', navItems, 'Кардиология')
+			+aside-spec
+		block innerMain
+			+service-inner
+			+inner-form
+block footer
+	+contacts
+	+footer

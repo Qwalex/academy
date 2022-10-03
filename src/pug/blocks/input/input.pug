@@ -1,0 +1,10 @@
+mixin input-icon(placeholder, name, type, icon)
+    .input
+        .input__icon: i(class="icm " + icon)
+        input(type=type, name=name, placeholder=placeholder).input__input
+
+mixin input(placeholder, name, type)
+    input(type=type, name=name, placeholder=placeholder).input
+
+mixin textarea(placeholder, name)
+    textarea(name=name, placeholder=placeholder).textarea

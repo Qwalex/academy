@@ -22,7 +22,6 @@ export default class MobileNav {
     if (this.isOpen) {
       return;
     }
-    console.log('open')
     this.isOpen = true;
     this.$mobileNav.add(this.$mobileNavToggle).addClass(this.classes.open);
   }

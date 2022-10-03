@@ -5,6 +5,7 @@ Swiper.use([Navigation, Autoplay, Pagination]);
 export default class Slider {
     constructor(el) {
         this.el = el;
+        this.$el = $(this.el);
         this.params = {};
     }
 

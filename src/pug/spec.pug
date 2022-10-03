@@ -1,0 +1,48 @@
+extends templates/_default
+
+block head 
+	title Home
+
+block header 
+	+header
+
+block main
+	+inner-top('Акции и спецпредложения', ['Главная', 'Акции и спецпредложения'])
+	+inner-page(true)
+		block innerMain
+			-
+				const items = [
+					{
+						image: '../img/spec-1.jpg',
+						description: 'Мы проведем оценку защитных способностей вашего организма и им  мунного ответа к COVID-19.',
+					},
+					{
+						image: '../img/spec-2.jpg',
+						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam',
+					},
+					{
+						image: '../img/spec-3.jpg',
+						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit     ',
+					},
+					{
+						image: '../img/spec-2.jpg',
+						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam',
+					},
+					{
+						image: '../img/spec-3.jpg',
+						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit     ',
+					},
+					{
+						image: '../img/spec-2.jpg',
+						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam',
+					},
+				]
+			.reviews-main
+				.reviews-main__row
+					each item in items
+						.reviews-main__column
+							+spec-card(item)
+
+block footer
+	+contacts
+	+footer

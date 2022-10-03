@@ -8,7 +8,7 @@
   "scripts": {
     "bowerClean": "find build/libs -mindepth 2 -type d -not \\( -path **/dist -prune \\) -print0 | xargs -0 rm -rf && find build/libs -maxdepth 2 -type f -print0 | xargs -0 rm -rf",
     "start": "gulp",
-    "prod": "set NODE_ENV='production' && bower i && yarn bowerClean && gulp build && gulp zip",
+    "prod": "set NODE_ENV='production' && gulp build",
     "end": "git add . && git commit -m 'autodeploy' && git push -u origin master && npm run prod && gulp deploy"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
+    "@fancyapps/ui": "^4.0.31",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-runtime": "^6.23.0",
     "browser-sync": "^2.23.6",
@@ -44,6 +45,7 @@
     "pug": "^2.0.0-rc.4",
     "sass": "^1.54.8",
     "swiper": "^8.4.2",
+    "vue": "^2.7.10",
     "vue-loader": "^15.8.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",

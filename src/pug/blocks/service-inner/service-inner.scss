@@ -1,0 +1,11 @@
+.service-inner {
+    &__doctors-item {
+        margin-bottom: 8px;
+    }
+
+    &__sertificates-slider {
+        .swiper {
+            overflow: hidden;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+mixin reviews-card(item)
+    .reviews-card&attributes(attributes)
+        .reviews-card__quotes: i.icm.icm-quotes
+        .reviews-card__title=item.title
+        .reviews-card__description!=item.description
+        .reviews-card__stars
+            +stars(item.rating)
+        .reviews-card__name Инна Ч.
+        time.reviews-card__date 22.02.2022

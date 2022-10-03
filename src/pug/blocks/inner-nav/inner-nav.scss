@@ -1,0 +1,102 @@
+.inner-nav {
+    margin-bottom: 16px;
+
+    &__header {
+        background-color: #0092D3;
+        border-radius: 8px;
+        border-bottom-right-radius: 0;
+        padding: 13px 20px;
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 700;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media (lg) {
+            border-radius: 8px;
+        }
+    }
+
+    &__toggle {
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        transition: transform .25s;
+        display: none;
+
+        @include media (lg) {
+            display: flex;
+        }
+
+        .inner-nav--active & {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__list {
+        @extend %disable-list;
+        background-color: #E3F1FD;
+        padding: 8px 0;
+        overflow: hidden;
+    }
+    
+    &__list-wrapper {
+        transition: height .25s;
+
+        @include media (lg) {
+            overflow: auto;
+            border-radius: 8px;
+            height: 0;
+
+            .inner-nav--active & {
+                height: 200px;
+                overflow: auto;
+            }
+        }
+    }
+    
+    &__item {
+        margin-bottom: 7px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        @extend %disable-link;
+        padding: 10px 20px;
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+
+        .inner-nav__item:not(.inner-nav__item--active) & {
+            &:hover {
+                background-color: darken(#E3F1FD, 2%);
+            }
+
+            &:active {
+                background-color: darken(#E3F1FD, 3%);
+            }
+        }
+
+        .inner-nav__item--active & {
+            background-color: $white;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                bottom: 2px;
+                left: 0;
+                width: 4px;
+                background-color: #1A72B2;
+                display: block;
+                border-radius: 0 4px 4px 0;
+            }
+        }
+    }
+}

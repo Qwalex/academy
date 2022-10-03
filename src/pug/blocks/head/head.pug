@@ -1,7 +1,8 @@
 mixin head(title, all)
     .head&attributes(attributes)
         .head__title=title
-        a(href="#").head__all
-            span.head__all-icon: i.icm.icm-pulse
-            span.head__all-title=all
+        if all
+            a(href="#").head__all
+                span.head__all-icon: i.icm.icm-pulse
+                span.head__all-title=all
         

@@ -45,13 +45,65 @@ START: COMPONENTS
 @import "../pug/blocks/text-area/text-area";
 @import "../pug/blocks/doc-slider/doc-slider";
 @import "../pug/blocks/doc-card/doc-card";
+@import "../pug/blocks/service/service";
+@import "../pug/blocks/service-card/service-card";
+@import "../pug/blocks/service-mini/service-mini";
+@import "../pug/blocks/service-slider/service-slider";
+@import "../pug/blocks/about/about";
+@import "../pug/blocks/about-slider/about-slider";
+@import "../pug/blocks/feature-card/feature-card";
+@import "../pug/blocks/reviews/reviews";
+@import "../pug/blocks/reviews-slider/reviews-slider";
+@import "../pug/blocks/reviews-card/reviews-card";
+@import "../pug/blocks/sertificates/sertificates";
+@import "../pug/blocks/sertificates-slider/sertificates-slider";
+@import "../pug/blocks/sertificates-card/sertificates-card";
+@import "../pug/blocks/stars/stars";
+@import "../pug/blocks/modal/modal";
+@import "../pug/blocks/inner-top/inner-top";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/inner-page/inner-page";
+@import "../pug/blocks/inner-nav/inner-nav";
+@import "../pug/blocks/service-main/service-main";
+@import "../pug/blocks/aside-spec/aside-spec";
+@import "../pug/blocks/inner-form/inner-form";
+@import "../pug/blocks/form/form";
+@import "../pug/blocks/input/input";
+@import "../pug/blocks/about-sert/about-sert";
+@import "../pug/blocks/about-faq/about-faq";
+@import "../pug/blocks/faq/faq";
+@import "../pug/blocks/info-tabs/info-tabs";
+@import "../pug/blocks/spoiler/spoiler";
+@import "../pug/blocks/reviews-main/reviews-main";
+@import "../pug/blocks/service-inner/service-inner";
+@import "../pug/blocks/table-price/table-price";
+@import "../pug/blocks/tabs/tabs";
+@import "../pug/blocks/checkbox/checkbox";
+@import "../pug/blocks/analyzes-inner/analyzes-inner";
+@import "../pug/blocks/analyzes-list/analyzes-list";
+@import "../pug/blocks/analyzes-item/analyzes-item";
 
 @import "../pug/blocks/head/head";
 // ##
 @import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
 /*========================
 END: COMPONENTS
 ========================*/
+
+.bd-radius {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.img-responsive {
+	max-width: 100%;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+
 .ta-center {
 	text-align: center;
 }
@@ -62,4 +114,76 @@ END: COMPONENTS
 
 .bold {
 	font-weight: 800;
+}
+
+.link {
+	text-decoration: underline;
+	color: #0092D3;
+}
+
+.ov-hidden {
+	overflow: hidden;
+}
+
+.hide-sm {
+	@include media (sm) {
+		display: none;
+	}
+}
+
+.only-sm {
+	display: none;
+
+	@include media (sm) {
+		display: block;
+	}
+}
+
+.ez-tooltip {
+	position: relative;
+
+	&__content {
+		position: absolute;
+		width: 200px;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -100px;
+		padding-bottom: 10px;
+		display: none;
+		animation: fadeIn 0.25s;
+	}
+
+	&__content-inner {
+		background-color: white;
+		padding: 5px;
+		position: relative;
+		font-size: 13px;
+		line-height: 1.5;
+		box-shadow: 0 0 30px rgba(0,0,0,.1);
+		border-radius: 8px;
+
+		&:before {
+			content: '';
+			border: 5px solid transparent;
+			border-top-color: white;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%);
+		}
+	}
+
+	&:hover .ez-tooltip__content {
+		display: block;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }

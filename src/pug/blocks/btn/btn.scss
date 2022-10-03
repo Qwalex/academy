@@ -9,6 +9,8 @@
 	padding: 2px 24px 3px;
 	min-height: 36px;
 	text-align: center;
+	transition: all .25s; 
+	cursor: pointer;
 
 	@include media(lg) {
 		padding: 2px 12px 3px;
@@ -27,6 +29,11 @@
 		min-height: 52px;
 	}
 
+	&--rect {
+		padding: 7px;
+		min-width: 36px;
+	}
+
 	&--blue {
 		color: $white;
 		background-color: $blue400;
@@ -37,6 +44,16 @@
 
 		&:active {
 			background-color: darken($blue400, 2%);
+		}
+	}
+
+	&--blue-bd {
+		border: 1px solid #E0F0FF;
+		border-radius: 8px;
+		color: #196CA9;
+
+		&:hover {
+			border-color: #196CA9; 
 		}
 	}
 

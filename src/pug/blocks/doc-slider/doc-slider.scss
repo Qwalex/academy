@@ -1,3 +1,39 @@
 .doc-slider {
-    
+    background-color: #1A72B2;
+
+    &__swiper {
+        position: relative;
+    }
+
+    &__slide {
+        height: auto !important;
+    }
+
+    &__nav {
+        @extend .home-slider__nav;
+        z-index: 2;
+        display: flex !important;
+
+        &.swiper-button-disabled {
+            display: none !important;
+        }
+
+        &--prev {
+            @extend .home-slider__nav--prev;
+            left: 44px;
+
+            @include media (md) {
+                left: 10px;
+            }
+        }
+
+        &--next {
+            @extend .home-slider__nav--next;
+            right: 44px;
+
+            @include media (md) {
+                right: 10px;
+            }
+        }
+    }
 }

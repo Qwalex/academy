@@ -1,0 +1,109 @@
+mixin service-inner
+	.service-inner.mb-16
+		.info-tabs.js-tabs(data-header-active="info-tabs__header-item--active")
+			.info-tabs__header
+				.info-tabs__header-item.js-tabs-header-item.info-tabs__header-item--active Описание
+				.info-tabs__header-item.js-tabs-header-item Врачи
+				.info-tabs__header-item.js-tabs-header-item Цены
+				.info-tabs__header-item.js-tabs-header-item Вопросы и ответы
+				.info-tabs__header-item.js-tabs-header-item Лицензии и сертификаты
+			.info-tabs__body.text-area--outer.text-area--no-border
+				.info-tabs__item.js-tabs-body-item.tabs__body-item.tabs__body-item--active#service-description
+					.text-area.text-area--content.text-area--inner
+						p В медицинском центре «Академия здоровья» вам окажут помощь специалисты высшей квалификационной категории. У нас применяются все информативные диагностические методы для исследования различных патологий в области сердечно-сосудистой системы.
+						p Медицинский центр «Академия здоровья» применяет только самые современные способы диагностики и лечения. Медицинский персонал регулярно посещает курсы повышения квалификации, обменивается опытом с коллегами из зарубежных стран, знакомится с новейшими технологиями, чтобы предоставить своим пациентам наиболее эффективное лечение болезней сердечно-сосудистой системы.
+						p Следует понимать, что любое заболевание значительно проще предупредить, чем вылечить. Терапия и ограничительные меры при заболевании на начальном этапе значительно проще и меньше, чем на финальном этапе. Кроме того, человеку определенного возраста следует регулярно посещать кардиолога с целью профилактического осмотра.
+						p: b Консультация кардиолога необходима:
+						ul 
+							li лицам мужского пола старше 40 лет;
+							li лицам женского пола старше 50 лет;
+							li женщинам с патологией сердца и сосудов, которые планируют беременность или уже находятся в интересном положении;
+							li людям, у которых есть ближайшие родственники с сердечно-сосудистыми заболеваниями;
+							li детям и подросткам с врожденной сердечно-сосудистой патологией.
+				.info-tabs__item.js-tabs-body-item.tabs__body-item#service-doctors 
+					.text-area.text-area--content.text-area--inner
+						.text-area__header.text-area__header--counter
+							span Врачи кардиологии
+							.text-area__counter 3
+						-
+							const docs = [
+								{
+									header: 'Абрамова Ирина Леонидовна',
+									tip: 'Врач ультразвуковой диагностики',
+									image: 'img/service-inner-doc.jpg',
+									body: {
+										title: 'Опыт: 10 лет',
+										description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+									}
+								},
+								{
+									header: 'Резник Светлана Анатольевна',
+									tip: 'Врач ультразвуковой диагностики',
+									image: 'img/service-inner-doc.jpg',
+									body: {
+										title: 'Опыт: 10 лет',
+										description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+									}
+								},
+								{
+									header: 'Раневский Иван Александрович',
+									tip: 'Врач ультразвуковой диагностики',
+									image: 'img/service-inner-doc.jpg',
+									body: {
+										title: 'Опыт: 10 лет',
+										description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+									}
+								}
+							]
+						.service-inner__doctors
+							each item, key in docs
+								.service-inner__doctors-item
+									+doc-spoiler(item, (key === 0 ? true : false))
+				.info-tabs__item.js-tabs-body-item.tabs__body-item#service-prices 
+					.text-area.text-area--content.text-area--inner
+						.text-area__header
+							span Цены
+						each i in [1,2]
+							.table-price.mb-16
+								-
+									const prices = [
+										['Суточное мониторирование ЭКГ (Холтер-ЭКГ), 3 канала', 1500],
+										['Суточное мониторирование ЭКГ (Холтер-ЭКГ), 12 каналов', 1500],
+										['Регистрация и расшифровка ЭКГ', 1500],
+										['Регистрация ЭКГ при физической нагрузке (дополнительно к основной ЭКГ)', 1500],
+										['Спирография (ФВД)', 1500],
+									]
+								table.table-price__table
+									thead 
+										tr
+											th.table-price__th Стоимость услуг функциональной диагностики
+											th.table-price__th ₽
+										each price in prices
+											tr 
+												td.table-price__td=price[0]
+												td.table-price__td=price[1]
+									
+				.info-tabs__item.js-tabs-body-item.tabs__body-item#service-faq 
+					.text-area.text-area--content.text-area--inner
+						.text-area__header
+							span Вопросы и ответы
+						-
+							const items = [
+								['Как записаться на прием ?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием ?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+								['Как записаться на прием ?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'],
+							]
+						+faq(items)
+				.info-tabs__item.js-tabs-body-item.tabs__body-item#service-sertificates 
+					.text-area.text-area--content.text-area--inner
+						.text-area__header
+							span.text-area__header-title Лицензии и сертификаты
+							a(href="#").head__all.text-area__header-more
+								span.head__all-icon: i.icm.icm-pulse
+								span.head__all-title Смотреть все
+						.text-area.mb-16 Нам очень важно знать ваше мнение о нашей работе. Будем вам благодарны за любую информацию, которая позволит нам улучшить свою работу.
+						-
+							const sertificates = [1,2,3,4,5,6,7,8,9,10]
+						+sertificates-slider(4).service-inner__sertificates-slider
+							each item in sertificates
+								.swiper-slide.sertificates-slider__slide: +sertificates-card(item)

@@ -1,0 +1,53 @@
+.analyzes-list {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0;
+        padding: 0 17px;
+
+        @include media (sm) {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__card {
+        button {
+            position: relative;
+        }
+    }
+
+    &__card-count {
+        position: aboslute;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        background-color: $white;
+        border: 1px solid #CB3851;
+        font-size: 9px;
+        color: #CB3851;
+        display: inline-block;
+        right: 1px;
+        top: 1px;
+        font-weight: 700;
+    }
+
+    &__all {
+        font-weight: 500;
+        line-height: 1.5;
+        cursor: pointer;
+
+        .checkbox {
+            margin-right: 16px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 16px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

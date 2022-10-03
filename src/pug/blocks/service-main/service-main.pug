@@ -1,0 +1,33 @@
+mixin service-main 
+    .service-main
+        .service-main__row
+            -
+                const items = [
+                    {
+                        title: 'Диагностика',
+                    },
+                    {
+                        title: 'Лаборатория',
+                    },
+                    {
+                        title: 'Программы обследований',
+                    },
+                ]
+            each item, key in items
+                .service-main__column: +service-card(item, key).service-card--md
+        .service-main__row.service-main__row--offset
+            -
+                const itemsMini = [
+                    {icm: 'heart', title: 'Кардиолог'},
+                    {icm: 'end', title: 'Эндокринолог'},
+                    {icm: 'baby', title: 'Кардиолог'},
+                    {icm: 'brain', title: 'Кардиолог'},
+                    {icm: 'baby', title: 'Кардиолог'},
+                    {icm: 'brain', title: 'Кардиолог'},
+                    {icm: 'end', title: 'Эндокринолог'},
+                    {icm: 'heart', title: 'Кардиолог'},
+                ]
+            each item in itemsMini
+                .service-main__column.service-main__column--sm: +service-mini(item)
+        +inner-form
+        +aside-spec.aside-spec--mobile

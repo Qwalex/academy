@@ -1,0 +1,136 @@
+.feature-card {
+    background: #FFFFFF;
+    padding: 40px 68px 73px 38px;
+    border: 1px solid #E0F0FF;
+    box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.02);
+    border-radius: 22px;
+    position: relative;
+    height: 100%;
+
+    @include media (xl) {
+        padding: 25px 25px 50px 25px;
+    }
+
+    @media screen and (max-width: 991px) and (min-width: 768px) {
+        padding: 15px 15px 50px 15px;
+    }
+
+    @include media (lg) {
+        border-radius: 12px;
+    }
+
+    @include media (md) {
+        margin-bottom: 30px;
+    }
+
+    @include media (sm) {
+        padding: 15px 15px 30px 15px;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__feature {
+        display: inline-block;
+        padding: 3.5px 10px;
+        background-color: #0092D3;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 4px;
+        line-height: 1.375;
+        margin-bottom: 30px;
+
+        @include media (xl) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+            font-size: 12px;
+            padding: 3px 10px;
+        }
+    }
+
+    &__number {
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 1;
+        color: #F3FAFF;
+        position: absolute;
+        top: 32px;
+        right: 70px;
+        pointer-events: none;
+        transform: translate(50%);
+
+        @include media (xl) {
+            font-size: 170px;
+            top: 40px;
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+            font-size: 130px;
+        }
+    }
+
+    &__cross {
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #E4F1FC;
+        border: 1px solid #E0F0FF;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+        bottom: 17px;
+        right: 16px;
+    }
+
+    &__image {
+        margin-bottom: 26px;
+        width: 140px;
+
+        img {
+            width: 100%;
+        }
+
+        @include media (xl) {
+            width: 120px;
+            margin-bottom: 18px;
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__description {
+        color: #757095;
+        line-height: 1.5;
+
+        p {
+            margin: 13px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+            font-size: 15px;
+        }
+
+        @include media (md) {
+            font-size: 15px;
+        }
+    }
+}

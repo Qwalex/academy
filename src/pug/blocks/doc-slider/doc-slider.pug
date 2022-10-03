@@ -1,6 +1,6 @@
 mixin doc-slider
     .doc-slider
-        .doc-slider__swiper
+        .doc-slider__swiper.swiper.js-doc-slider
             -
                 const items = [
                     {
@@ -40,5 +40,8 @@ mixin doc-slider
                         image: '../img/doc-2.png',
                     },
                 ]
-            each item in items
-                .doc-slider__slide: +doc-card(item)
+            .js-doc-slider-prev.doc-slider__nav.doc-slider__nav--prev: i.icm.icm-arrow-left
+            .js-doc-slider-next.doc-slider__nav.doc-slider__nav--next: i.icm.icm-arrow-right
+            .swiper-wrapper
+                each item, key in items
+                    .doc-slider__slide.swiper-slide(class=`${((key + 1) % 2 === 0) ? 'doc-slider__slide--even' : ''}`): +doc-card(item)

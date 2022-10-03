@@ -1,0 +1,104 @@
+.inner-form {
+    display: flex;
+
+    @include media (md) {
+        flex-direction: column;
+    }
+
+    &__text {
+        border-radius: 8px 0 0 8px;
+        background-color: #0092D3;
+        display: flex;
+        align-items: center;
+        padding: 32px;
+        padding-top: 45px;
+        color: $white;
+        flex: 0 0 320px;
+        max-width: 320px;
+        position: relative;
+        overflow: hidden;
+
+        @include media (xl) {
+            padding: 20px;
+            flex: 0 0 280px;
+            max-width: 280px;
+        }
+
+        @include media (md) {
+            border-radius: 8px 8px 0 0;
+            padding: 15px 15px 10px;
+            max-width: none;
+            flex: 0 1 auto;
+        }
+
+        &:before {
+            content: '';
+            width: 254px;
+            height: 254px;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0.06;
+            transform: matrix(0.82, -0.57, -0.57, -0.82, 0, 0);
+            position: absolute;
+            border-radius: 50%;
+            top: -20%;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 23px;
+
+        @include media (xl) {
+            font-size: 21px;
+        }
+
+        @include media (md) {
+            font-size: 18px;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 1.388;
+
+        @include media (xl) {
+            font-size: 16px;
+        }
+        
+
+        @include media (md) {
+            font-size: 15px;
+            margin-bottom: 13px;
+        }
+
+        p {
+            margin: 10px 0;
+
+            @include media (md) {
+                margin: 6px 0;
+            }
+        }
+
+        b {
+            font-size: 1.111em;
+        }
+    }
+
+    &__form {
+        padding: 41px 32px;
+        background-color: $white;
+        border-radius: 0 8px 8px 0;
+        flex: 1 1 0;
+
+        @include media (xl) {
+            padding: 30px 21px;
+        }
+
+        @include media (md) {
+            padding: 15px;
+            border-radius: 0px 0 8px 8px;
+        }
+    }
+}

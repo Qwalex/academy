@@ -43,7 +43,6 @@ export default class MainNav {
   }
 
   setVisibilityForItems(width) {
-    console.log(window)
     const hiddenElements = this.getHiddenElementsByWidth(width).map((item) => item.item);
     this.$items.not(hiddenElements).removeClass(this.classes.items.hidden);
     $(hiddenElements).addClass(this.classes.items.hidden);

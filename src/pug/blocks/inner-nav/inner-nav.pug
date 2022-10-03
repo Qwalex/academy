@@ -1,0 +1,12 @@
+mixin inner-nav(header, nav = [1,2,3], activePoint) 
+    nav.inner-nav.js-inner-nav
+        .inner-nav__header.js-inner-nav-header
+            span=header
+            span.inner-nav__toggle: i.icm.icm-angle-bottom
+        .inner-nav__list-wrapper
+            ul.inner-nav__list
+                each item in nav
+                    if item===activePoint
+                        li.inner-nav__item.inner-nav__item--active: span.inner-nav__link=item
+                    else
+                        li.inner-nav__item: a(href="#").inner-nav__link=item
